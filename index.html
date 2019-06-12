@@ -1,0 +1,82 @@
+<html>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+</link>
+
+<body>
+    <div class="container">
+        <h1>Get an account</h1>
+        <hr>
+        <p>Acc num:</p><input type="number" id="num1" value=1></input><button onclick="get(num1.value)">get
+            account</button><br><br>
+        <button onclick="get(1)">1</button>
+        <button onclick="get(2)">2</button>
+        <button onclick="get(3)">3</button>
+        <button onclick="get(4)">4</button>
+        <button onclick="get(5)">5</button>
+        <button onclick="getAll()">Get All Accounts</button>
+
+        <p id="result"></p>
+        <hr>
+    </div>
+    <form onsubmit="post(accNum, firstName, lastName)">
+        <div class="container">
+            <h1>Create account</h1>
+            <p>Please fill in this form to create an account.</p>
+            <hr>
+            <label for="accountNum"><b>Account Number</b></label>
+            <input type="text" placeholder="Enter Account No." id="accNum" required>
+
+            <label for="firstName"><b>First Name</b></label>
+            <input type="text" placeholder="Enter First Name" id="firstName" required>
+
+            <label for="lastName"><b>Last Name</b></label>
+            <input type="text" placeholder="Enter Last Name" id="lastName" required>
+
+            <br><button type="submit" class="registerbtn">Create</button>
+            <p id="creResult"></p>
+            <hr>
+        </div>
+    </form>
+
+    <form onsubmit="update(upd.value, accNumU, firstNameU, lastNameU)">
+        <div class="container">
+            <h1>Update account</h1>
+            <hr>
+            <label for="accountNum"><b>Account Number</b></label>
+            <input type="text" placeholder="Enter Account No." id="accNumU" required>
+
+            <label for="firstName"><b>First Name</b></label>
+            <input type="text" placeholder="Enter First Name" id="firstNameU" required>
+
+            <label for="lastName"><b>Last Name</b></label>
+            <input type="text" placeholder="Enter Last Name" id="lastNameU" required>
+
+            <p>Account id:</p><input type="number" id="upd" value=1></input><button>Update
+                account</button><br>
+            <hr>
+        </div>
+    </form>
+
+    <div class="container">
+        <h1>Delete account</h1>
+        <hr>
+        <p>Account id:</p><input type="number" id="num2" value=1></input><button onclick="deleteAcc(num2.value)">delete
+            account</button>
+        <p id="delResult"></p>
+        <hr>
+    </div>
+</body>
+<script src="api.js"></script>
+
+
+</html>
